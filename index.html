@@ -9,6 +9,17 @@
 		<link rel="stylesheet" href="css/main.css" />
 		<noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
 	</head>
+	<script>
+		window.onload = init;
+
+		function init(){
+			let date=new Date();
+			//四位
+			let yearFour=date.getFullYear();
+			let nowYear = document.getElementById('nowYear');
+			nowYear.innerHTML = '©2020~' + yearFour + ' ';
+		}
+	</script>
 	<body> 
 
 		<!-- Wrapper -->
@@ -38,8 +49,7 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">©2021 <a href="https://jcxiaozhan.gitee.io" target="_blank" >JC小站</a> 版权所有</p>
-
+						<p class="copyright"><span id="nowYear"></span><a href="https://jcxiaozhan.gitee.io" target="_blank" >JC小站</a> 版权所有</p>
 					</footer>
 
 			</div>
